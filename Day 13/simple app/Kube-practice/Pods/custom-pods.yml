@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: new-pods
+spec:
+  containers:
+    - name: my-image-container
+      image: eset0074/my-image:main
