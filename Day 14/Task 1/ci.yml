@@ -1,0 +1,22 @@
+name: Simple CI
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  hello-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v4
+
+      - name: Say Hello
+        run: echo "Hello GitHub Actions"
+
+      - name: Print date and branch name
+        run: |
+          echo "Current date: $(date)"
+          echo "Branch name: ${GITHUB_REF#refs/heads/}"

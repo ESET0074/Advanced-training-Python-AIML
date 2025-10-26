@@ -1,0 +1,36 @@
+name: Python Test CI
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt || echo "No requirements.txt found"
+
+      - name: Run tests
+        run: |
+          echo "Running unit tests..."
+          python -m unittest discover || exit 1
+
+      - name: Tests Passed Message
+        if: success()
+        run: echo "All tests passed successfully!"
+
+      - name: Tests Failed Message
+        if: failure()
+        run: echo "Tests failed. Please check the logs."
