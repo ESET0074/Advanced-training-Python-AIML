@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hotel Booking Cancellation Prediction</title>
+</head>
+<body>
+<h1>Predict Hotel Booking Cancellation</h1>
+
+<form action="/predict" method="post">
+  <label>Hotel:</label>
+  <input type="text" name="hotel" required><br>
+
+  <label>Arrival Month (1-12):</label>
+  <input type="number" name="arrival_date_month" min="1" max="12" required><br>
+
+  <label>Lead Time:</label>
+  <input type="number" step="any" name="lead_time" required><br>
+
+  <label>Arrival Week Number:</label>
+  <input type="number" name="arrival_date_week_number" required><br>
+
+  <label>Arrival Day of Month:</label>
+  <input type="number" name="arrival_date_day_of_month" required><br>
+
+  <label>Stays in Weekend Nights:</label>
+  <input type="number" name="stays_in_weekend_nights" required><br>
+
+  <label>Stays in Week Nights:</label>
+  <input type="number" name="stays_in_week_nights" required><br>
+
+  <label>Adults:</label>
+  <input type="number" name="adults" required><br>
+
+  <label>Children:</label>
+  <input type="number" step="any" name="children" required><br>
+
+  <label>Babies:</label>
+  <input type="number" name="babies" required><br>
+
+  <label>Is Repeated Guest (0/1):</label>
+  <input type="number" name="is_repeated_guest" required><br>
+
+  <label>Previous Cancellations:</label>
+  <input type="number" name="previous_cancellations" required><br>
+
+  <label>Previous Non-Cancelled Bookings:</label>
+  <input type="number" name="previous_bookings_not_canceled" required><br>
+
+  <label>Parking Spaces:</label>
+  <input type="number" name="required_car_parking_spaces" required><br>
+
+  <label>Special Requests:</label>
+  <input type="number" name="total_of_special_requests" required><br>
+
+  <label>ADR (Average Daily Rate):</label>
+  <input type="number" step="any" name="adr" required><br>
+
+  <label>Meal:</label>
+  <input type="text" name="meal" required><br>
+
+  <label>Market Segment:</label>
+  <input type="text" name="market_segment" required><br>
+
+  <label>Distribution Channel:</label>
+  <input type="text" name="distribution_channel" required><br>
+
+  <label>Reserved Room Type:</label>
+  <input type="text" name="reserved_room_type" required><br>
+
+  <label>Deposit Type:</label>
+  <input type="text" name="deposit_type" required><br>
+
+  <label>Customer Type:</label>
+  <input type="text" name="customer_type" required><br>
+
+  <button type="submit">Predict Cancellation</button>
+</form>
+
+</body>
+</html>

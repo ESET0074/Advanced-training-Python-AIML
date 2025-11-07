@@ -1,0 +1,15 @@
+# Core scientific libraries
+numpy
+pandas
+matplotlib
+scikit-learn
+
+# TensorFlow for neural network
+tensorflow>=2.12
+
+# Optional (for smooth progress bars during model training)
+tqdm
+fastapi
+jinja2
+python-multipart
+uvicorn
